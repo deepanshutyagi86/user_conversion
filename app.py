@@ -30,7 +30,8 @@ def predict():
     valid_devices = ['Mobile', 'Desktop']
     
     if data['traffic_source'] not in valid_sources:
-        return jsonify({'error': f'traffic_source must be one of : { ',' .join(valid_sources)}'}), 400
+        return jsonify({'error': f"traffic_source must be one of : {', '.join(valid_sources)}"}), 400
+
     
     if data['user_device'] not in valid_devices:
         return jsonify({'error': f"valid devices must be one of : { ','.join(valid_devices)}"}), 400
